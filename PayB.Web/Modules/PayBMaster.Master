@@ -1,10 +1,14 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PayBMaster.master.cs" Inherits="PayB.Web.Modules.PayBMaster" %>
 
+
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
     <title></title>
+     <asp:PlaceHolder runat="server">
+    <%: Scripts.Render("~/bundles/app") %>
+</asp:PlaceHolder>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -14,6 +18,7 @@
             <asp:ContentPlaceHolder ID="content" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-    </form>
+    </form>                                                             
+       
 </body>
 </html>
