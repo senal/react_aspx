@@ -1,13 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var Overview = /** @class */ (function () {
-    function Overview(to) {
-        this.to = to;
+const React = require("react");
+// 'HelloProps' describes the shape of props.
+// State is never set so we use the '{}' type.
+class Hello extends React.Component {
+    render() {
+        return React.createElement("h1", null,
+            "Hello from ",
+            this.props.compiler,
+            " and ",
+            this.props.framework,
+            " !");
     }
-    Overview.prototype.greet = function () {
-        return "Hi " + this.to;
-    };
-    return Overview;
-}());
-exports.Overview = Overview;
+}
+exports.Hello = Hello;
 //# sourceMappingURL=overview.js.map

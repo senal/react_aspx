@@ -127,8 +127,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <TypeScriptCompile Include="Modules\Components\index.ts" />
-    <TypeScriptCompile Include="Modules\Components\overview.ts" />
+    <TypeScriptCompile Include="Modules\Components\index.tsx" />
+    <TypeScriptCompile Include="Modules\Components\overview.tsx" />
+    <TypeScriptCompile Include="Modules\Components\welcome.tsx" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

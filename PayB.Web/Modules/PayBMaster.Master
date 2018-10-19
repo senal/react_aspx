@@ -6,19 +6,21 @@
 <html>
 <head runat="server">
     <title></title>
-     <asp:PlaceHolder runat="server">
-    <%: Scripts.Render("~/bundles/app") %>
-</asp:PlaceHolder>
+     
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+ 
     <form id="frmMain" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="content" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>                                                             
-       
 </body>
+         <asp:PlaceHolder runat="server">
+            <%: Scripts.Render("~/bundles/react") %>
+            <%: Scripts.Render("~/bundles/app") %>
+        </asp:PlaceHolder>  
 </html>

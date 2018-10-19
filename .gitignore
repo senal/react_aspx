@@ -42,3 +42,7 @@ dlldata.c
 
 # Node modules
 node_modules/
+
+# MAP and JS files
+*.js
+*.map

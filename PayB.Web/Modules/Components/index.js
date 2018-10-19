@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var overview_1 = require("./overview");
-var overview = new overview_1.Overview('Ranga');
-var message = overview.greet();
-console.log(message);
+exports.Hello = overview_1.Hello;
+var welcome_1 = require("./welcome");
+exports.Welcome = welcome_1.Welcome;
 //# sourceMappingURL=index.js.map
