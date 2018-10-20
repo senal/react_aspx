@@ -78,13 +78,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Scripts\main.build.js" />
     <Content Include="Global.asax" />
     <Content Include="Modules\PayBMaster.Master" />
     <Content Include="package.json" />
     <Content Include="tsconfig.json" />
     <Content Include="webpack.config.js" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -125,7 +126,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Assets\Scripts\" />
+  </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Modules\Components\index.tsx" />
     <TypeScriptCompile Include="Modules\Components\overview.tsx" />
@@ -161,10 +164,11 @@
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
-</Project>
+       Other similar extension points exist, see Microsoft.Common.targets. -->
+ <Target Name="BeforeBuild">
+   <Exec Command="npm run-script build-prod"  />
+
+   <Exec Command="npm run-script build-dev"
+         Condition="'$(Configuration)' == 'Debug'"/>
+ </Target>
+ </Project>
