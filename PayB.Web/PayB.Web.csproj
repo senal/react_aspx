@@ -130,9 +130,12 @@
     <Folder Include="Assets\Scripts\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Modules\Components\CustomerOverview.tsx" />
     <TypeScriptCompile Include="Modules\Components\index.tsx" />
-    <TypeScriptCompile Include="Modules\Components\overview.tsx" />
-    <TypeScriptCompile Include="Modules\Components\welcome.tsx" />
+    <TypeScriptCompile Include="Modules\Components\OutstandingBillerItem.tsx" />
+    <TypeScriptCompile Include="Modules\Components\Hello.tsx" />
+    <TypeScriptCompile Include="Modules\Components\OutstandingBillerList.tsx" />
+    <TypeScriptCompile Include="Modules\Components\Welcome.tsx" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
@@ -165,10 +168,8 @@
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets. -->
- <Target Name="BeforeBuild">
-   <Exec Command="npm run-script build-prod"  />
-
-   <Exec Command="npm run-script build-dev"
-         Condition="'$(Configuration)' == 'Debug'"/>
- </Target>
- </Project>
+  <Target Name="BeforeBuild">
+    <Exec Command="npm run-script build-prod" />
+    <Exec Command="npm run-script build-dev" Condition="'$(Configuration)' == 'Debug'" />
+  </Target>
+</Project>
