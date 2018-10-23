@@ -44,5 +44,6 @@ dlldata.c
 node_modules/
 
 # MAP and JS files
-*.js
 *.map
+*.min.*
+*.js
