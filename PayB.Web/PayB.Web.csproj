@@ -133,9 +133,7 @@
     <TypeScriptCompile Include="Modules\Components\CustomerOverview.tsx" />
     <TypeScriptCompile Include="Modules\Components\index.tsx" />
     <TypeScriptCompile Include="Modules\Components\OutstandingBillerItem.tsx" />
-    <TypeScriptCompile Include="Modules\Components\Hello.tsx" />
     <TypeScriptCompile Include="Modules\Components\OutstandingBillerList.tsx" />
-    <TypeScriptCompile Include="Modules\Components\Welcome.tsx" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

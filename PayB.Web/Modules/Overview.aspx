@@ -3,7 +3,7 @@
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" runat="server">
-    <div id="customer-overview"></div>
-    <div id="welcome"></div>
+    <div id="customeroverview" data-user-id="<%= UserId %>"></div>
+    <div id="billerlist" data-user-id="<%= UserId %>"></div>
 </asp:Content>
 
